@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@inquirer/confirm": "^2.0.2",
     "console.table": "^0.10.0",
     "iconv-lite": "^0.6.3",
     "inquirer": "^8.2.4",
