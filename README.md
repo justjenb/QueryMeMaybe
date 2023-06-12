@@ -18,3 +18,5 @@ https://stackoverflow.com/questions/75420796/mysql-results-for-inquirer-prompt
 
 https://stackoverflow.com/questions/70238296/trying-to-pass-variables-into-a-prepared-statement-in-javascript-node-js
 
+https://gist.github.com/midnightcodr/bd8f9cd4414f5571774c141d1e0865d8
+
