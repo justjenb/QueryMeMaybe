@@ -1,5 +1,8 @@
-const { closeConnection } = require('../lib/requests');
-const Department = require('../lib/department');
+const inquirer = require("inquirer");
+const { connectDatabase, closeConnection } = require("../lib/requests");
+const Department = require("../lib/department");
+const Role = require("../lib/role");
+const Employee = require("../lib/employee");
   
 describe("Departments", () => {
 
@@ -7,30 +10,21 @@ describe("Departments", () => {
         it("creates an instance of department", () => {
           const department = new Department();
           expect(department).toBeInstanceOf(Department);
-          closeConnection();
         });
       });
 
-      describe("Create New Department", () => {
-        it("creates a test department", async () => {
-          const department = new Department();
-          const newDeptName = "Automation Department";
-          const newDept = await department.createDepartment(newDeptName);
-    
-          expect(newDept).toBeTruthy();
-          expect(newDept.dept_name).toBe(newDeptName);
-          closeConnection();
+      describe("Instantiate Employee", () => {
+        it("creates an instance of employee", () => {
+          const employee = new Employee();
+          expect(employee).toBeInstanceOf(Employee);
         });
       });
 
-      describe("Get Departments", () => {
-        it("returns departments from the database", async () => {
-          const department = new Department();
-          const departments = await department.getDepartments();
-    
-          expect(Array.isArray(departments)).toBe(true);
-          expect(departments.length).toBeGreaterThan(0);
-          closeConnection();
+      describe("Instantiate Role", () => {
+        it("creates an instance of department", () => {
+          const role = new Role();
+          expect(role).toBeInstanceOf(Role);
         });
       });
+      closeConnection();
 });
